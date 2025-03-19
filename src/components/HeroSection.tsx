@@ -5,6 +5,16 @@ import { motion } from 'framer-motion';
 const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-r from-blue-900 via-blue-800 to-primary overflow-hidden">
+      {/* GenSan Seal Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <img 
+          src="/gensanseal.png" 
+          alt="" 
+          className="absolute opacity-30 w-[80%] md:w-[50%] h-auto top-1/2 -translate-y-1/2 left-[-15%] md:left-5"
+          aria-hidden="true"
+        />
+      </div>
+      
       {/* Background particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -33,6 +43,21 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="container relative z-10 text-white">
+        {/* Mobile profile image (only shows on small screens) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="block md:hidden text-center mb-8"
+        >
+          <img 
+            src="/sterling-profile.jpg" 
+            alt="Sterling Sañado" 
+            className="w-48 h-48 rounded-full mx-auto border-4 border-accent shadow-xl"
+          />
+        </motion.div>
+        
+        {/* Content grid */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -96,6 +121,7 @@ const HeroSection: React.FC = () => {
             </motion.div>
           </motion.div>
           
+          {/* Desktop profile image (only shows on medium screens and up) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
