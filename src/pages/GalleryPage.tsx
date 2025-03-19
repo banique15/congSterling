@@ -55,27 +55,34 @@ const GalleryPage = () => {
   const facebookVideos = [
     {
       id: 1,
+      title: "A NEW HOPE FOR GENERAL SANTOS CITY",
+      videoUrl: "https://www.facebook.com/watch/?v=651893303873250",
+      description: "ENGR. STERLING ASCAÑO SAÑADO, NO.3 #walayatikkayotomatik #ROADTOCONG",
+      date: "March 10, 2025"
+    },
+    {
+      id: 2,
       title: "JUST IN‼️ GIBOMBAHAN SILA‼️ | Underpass Project RealTalk",
       videoUrl: "https://www.facebook.com/61573018708186/videos/1300560907878036",
       description: "Congressional aspirant of Lone District of General Santos City, Engr. STERLING ASCAÑO SAÑADO nagpahayag sa iyang \"REALTALK\" views bahin sa underpass project sa crossing mabuhay-national highway! #walayatikkayotomatik #ROADTOCONG",
       date: "February 28, 2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "PAGPAILA: Meet Your Congressional Aspirant",
       videoUrl: "https://www.facebook.com/61573018708186/videos/1350969392574235",
       description: "An introduction to Engineer Sterling Sañado, your congressional candidate for General Santos City. Look for Option #3 on your ballot - a fresh face for change!",
       date: "February 22, 2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "Building Safety: Precast Fence & Parapet Walls",
       videoUrl: "https://www.facebook.com/sterling.sanado.3/videos/1462416741005880",
       description: "Engineer Sterling discusses precast fencing and highlights safety concerns with parapet walls during earthquakes, recommending aluminum composite panels instead of concrete hollow blocks to reduce weight and improve safety.",
       date: "December 2, 2023"
     },
     {
-      id: 4,
+      id: 5,
       title: "Earthquake Safety Proposal",
       videoUrl: "https://www.facebook.com/sterling.sanado.3/videos/648055060854986",
       description: "Engineer Sterling discusses building safety during earthquakes and proposes legislation to prohibit covering structural elements for easier inspection after earthquakes.",
@@ -282,7 +289,7 @@ const GalleryPage = () => {
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                   >
-                    <div className="p-4 bg-gray-50 border-b">
+                    <div className="p-4 bg-gradient-to-r from-blue-50 to-white border-b">
                       <h3 className="text-2xl font-bold flex items-center">
                         <FaVideo className="text-primary mr-2" />
                         {video.title}
@@ -291,7 +298,7 @@ const GalleryPage = () => {
                         <p className="text-xs text-gray-500 mt-1">{video.date}</p>
                       )}
                     </div>
-                    <div className="facebook-video-wrapper">
+                    <div className="relative overflow-hidden shadow-md">
                       <FacebookVideo 
                         videoUrl={video.videoUrl} 
                         width="100%" 
@@ -301,6 +308,16 @@ const GalleryPage = () => {
                     </div>
                     <div className="p-6">
                       <p className="text-gray-700 text-lg">{video.description}</p>
+                      <div className="mt-4 flex justify-end">
+                        <a 
+                          href={video.videoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer" 
+                          className="px-4 py-2 bg-primary text-white rounded-full text-sm hover:bg-primary-dark transition-colors"
+                        >
+                          View on Facebook
+                        </a>
+                      </div>
                     </div>
                   </motion.div>
                 ))}

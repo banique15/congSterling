@@ -159,6 +159,120 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Sponsorship Section */}
+      <section className="section bg-gradient-to-r from-blue-50 to-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4">
+              Support Our <span className="text-primary">Campaign</span>
+            </h2>
+            <p className="text-gray-700 max-w-3xl mx-auto mb-8">
+              Help us spread Engineer Sterling Sañado's message throughout General Santos City
+              with your generous contribution to our campaign materials.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-xl shadow-lg border border-blue-100"
+            >
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <img src="/gensanseal.png" alt="GenSan Seal" className="w-10 h-10" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Tarpaulin Sponsorship</h3>
+                  <p className="text-primary font-medium">Only ₱72 per sponsor</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 mb-6">
+                <p className="text-gray-700">
+                  For just <span className="font-bold text-primary">₱72</span>, you can sponsor a 
+                  <span className="font-bold"> 2ft × 3ft tarpaulin</span> featuring Engineer Sterling Sañado 
+                  and his platform for General Santos City.
+                </p>
+                <p className="text-gray-700">
+                  Your contribution helps us reach more voters and spread our message of 
+                  "Walay Atik kay Otomatik!" throughout the community.
+                </p>
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                  <p className="text-gray-700 font-medium">
+                    Each tarpaulin will be strategically placed in high-visibility areas to maximize campaign exposure.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <a 
+                  href="#payment-details" 
+                  className="btn-primary inline-flex items-center"
+                >
+                  Become a Sponsor
+                </a>
+                <span className="text-xs text-gray-500">100% secure payment</span>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              id="payment-details"
+              className="bg-white p-8 rounded-xl shadow-lg border border-blue-100 text-center"
+            >
+              <h3 className="text-xl font-bold mb-4">Payment Details</h3>
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <div className="mb-4">
+                  <div className="w-48 h-48 bg-gray-200 rounded-lg mx-auto flex items-center justify-center">
+                    {/* QR Code placeholder - to be replaced with actual QR code */}
+                    <p className="text-gray-500 text-sm">QR Code coming soon</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 font-medium">
+                  Scan the QR code to contribute ₱72 for a tarpaulin sponsorship
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-gray-700 font-medium">
+                  After payment, please send your payment screenshot to:
+                </p>
+                <div className="flex items-center justify-center gap-2">
+                  <FaPhone className="text-primary" />
+                  <span>(123) 456-7890</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <FaFacebook className="text-primary" />
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61573018708186"
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="text-blue-600 hover:underline"
+                  >
+                    Message us on Facebook
+                  </a>
+                </div>
+                <p className="text-xs text-gray-500 mt-4">
+                  Your name will be acknowledged on our website and social media as a campaign supporter.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form and Map */}
       <section className="section bg-gray-100">
         <div className="container">
@@ -240,6 +354,7 @@ const ContactPage = () => {
                         <option value="general">General Inquiry</option>
                         <option value="volunteer">Volunteer Opportunities</option>
                         <option value="donation">Campaign Donation</option>
+                        <option value="tarpaulin">Tarpaulin Sponsorship</option>
                         <option value="event">Event Information</option>
                         <option value="other">Other</option>
                       </select>
