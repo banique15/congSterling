@@ -32,68 +32,12 @@ const GalleryPage = () => {
     },
     {
       id: 2,
-      title: 'Community Meeting',
-      description: 'Engineer Sterling Sañado discussing development plans with community leaders',
-      category: 'events',
-      imageUrl: '/gallery-1.jpg',
-      date: 'March 15, 2023',
-    },
-    {
-      id: 3,
       title: 'Healthcare Initiative Launch',
       description: 'Engineer Sterling Sañado partnering with Red Cross to implement comprehensive healthcare programs for vulnerable communities in General Santos City, focusing on preventive care and emergency medical services.',
       category: 'healthcare',
       imageUrl: '/gallery-photos/healthcare-redcross.jpg',
       date: 'March 17, 2025',
-    },
-    {
-      id: 4,
-      title: 'School Visit',
-      description: 'Meeting with students and teachers at local schools',
-      category: 'education',
-      imageUrl: '/gallery-3.jpg',
-      date: 'May 10, 2023',
-    },
-    {
-      id: 5,
-      title: 'Infrastructure Project',
-      description: 'Inspecting progress on road development projects',
-      category: 'infrastructure',
-      imageUrl: '/gallery-4.jpg',
-      date: 'June 5, 2023',
-    },
-    {
-      id: 6,
-      title: 'Town Hall Meeting',
-      description: 'Addressing citizen concerns at a public town hall',
-      category: 'events',
-      imageUrl: '/gallery-5.jpg',
-      date: 'July 18, 2023',
-    },
-    {
-      id: 7,
-      title: 'Environmental Initiative',
-      description: 'Tree planting activity with local environmental groups',
-      category: 'environment',
-      imageUrl: '/gallery-6.jpg',
-      date: 'August 12, 2023',
-    },
-    {
-      id: 8,
-      title: 'Youth Leadership Program',
-      description: 'Launching leadership development programs for youth',
-      category: 'education',
-      imageUrl: '/gallery-7.jpg',
-      date: 'September 8, 2023',
-    },
-    {
-      id: 9,
-      title: 'Business Forum',
-      description: 'Meeting with local entrepreneurs and business leaders',
-      category: 'economy',
-      imageUrl: '/gallery-8.jpg',
-      date: 'October 25, 2023',
-    },
+    }
   ];
 
   const categories = [
@@ -391,13 +335,13 @@ const GalleryPage = () => {
                     <img src="/gallery-photos/healthcare-redcross.jpg" className="w-full h-full object-cover" alt="Healthcare" />
                   </div>
                   <div className="overflow-hidden">
-                    <img src="/gallery-1.jpg" className="w-full h-full object-cover" alt="Community" />
+                    <img src="/sterling-profile.jpg" className="w-full h-full object-cover" alt="Sterling Sañado" />
                   </div>
                   <div className="overflow-hidden">
-                    <img src="/gallery-3.jpg" className="w-full h-full object-cover" alt="Education" />
+                    <img src="/gensanbanner.png" className="w-full h-full object-cover" alt="General Santos City" />
                   </div>
                   <div className="overflow-hidden">
-                    <img src="/gallery-4.jpg" className="w-full h-full object-cover" alt="Infrastructure" />
+                    <img src="/gensan-seal.jpg" className="w-full h-full object-cover" alt="GenSan Seal" />
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center z-20">
