@@ -41,7 +41,7 @@ const ContactPage = () => {
   ];
 
   const socialMedia = [
-    { icon: <FaFacebook size={30} />, name: 'Facebook', url: 'https://facebook.com' },
+    { icon: <FaFacebook size={30} />, name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61573018708186' },
     { icon: <FaTwitter size={30} />, name: 'Twitter', url: 'https://twitter.com' },
     { icon: <FaInstagram size={30} />, name: 'Instagram', url: 'https://instagram.com' },
   ];
@@ -316,4 +316,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage; 
+export default ContactPage;

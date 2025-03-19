@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <FaFacebook size={20} />, url: 'https://facebook.com' },
+    { icon: <FaFacebook size={20} />, url: 'https://www.facebook.com/profile.php?id=61573018708186' },
     { icon: <FaTwitter size={20} />, url: 'https://twitter.com' },
     { icon: <FaInstagram size={20} />, url: 'https://instagram.com' },
     { icon: <FaYoutube size={20} />, url: 'https://youtube.com' },
