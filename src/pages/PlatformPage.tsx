@@ -166,7 +166,12 @@ const PlatformPage = () => {
               </div>
               <div className="rounded-lg overflow-hidden shadow-md">
                 <img
-                  src={`/platform-${activeTab}.jpg`}
+                  src={`/platform-images/${
+                    activeTab === 'safety' ? 'security' : 
+                    activeTab === 'environment' ? 'environmental' : 
+                    activeTab === 'economy' ? 'economic' : 
+                    activeTab
+                  }.jpg`}
                   alt={platformData[activeTab as PlatformKey].title}
                   className="w-full h-auto"
                 />
