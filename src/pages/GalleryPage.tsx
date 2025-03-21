@@ -55,34 +55,41 @@ const GalleryPage = () => {
   const facebookVideos = [
     {
       id: 1,
+      title: "Permit Process Update for Tatay Digong's 80th Birthday",
+      videoUrl: "https://www.facebook.com/sterling.sanado.3/videos/1306157810686639",
+      description: "KEEP IN TOUCH SA WHOLE VIDEO SA UPDATE SA PAGPROCESS NATO SA PERMIT PARA SA MARCH 28, 2025 80TH BIRTHDAY NI TATAY DIGONG. #walayatikkayotomatik #ROADTOCONG #godsavegensan",
+      date: "March 20, 2025"
+    },
+    {
+      id: 2,
       title: "A NEW HOPE FOR GENERAL SANTOS CITY",
       videoUrl: "https://www.facebook.com/watch/?v=651893303873250",
       description: "ENGR. STERLING ASCAÑO SAÑADO, NO.3 #walayatikkayotomatik #ROADTOCONG",
       date: "March 10, 2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "JUST IN‼️ GIBOMBAHAN SILA‼️ | Underpass Project RealTalk",
       videoUrl: "https://www.facebook.com/61573018708186/videos/1300560907878036",
       description: "Congressional aspirant of Lone District of General Santos City, Engr. STERLING ASCAÑO SAÑADO nagpahayag sa iyang \"REALTALK\" views bahin sa underpass project sa crossing mabuhay-national highway! #walayatikkayotomatik #ROADTOCONG",
       date: "February 28, 2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "PAGPAILA: Meet Your Congressional Aspirant",
       videoUrl: "https://www.facebook.com/61573018708186/videos/1350969392574235",
       description: "An introduction to Engineer Sterling Sañado, your congressional candidate for General Santos City. Look for Option #3 on your ballot - a fresh face for change!",
       date: "February 22, 2025"
     },
     {
-      id: 4,
+      id: 5,
       title: "Building Safety: Precast Fence & Parapet Walls",
       videoUrl: "https://www.facebook.com/sterling.sanado.3/videos/1462416741005880",
       description: "Engineer Sterling discusses precast fencing and highlights safety concerns with parapet walls during earthquakes, recommending aluminum composite panels instead of concrete hollow blocks to reduce weight and improve safety.",
       date: "December 2, 2023"
     },
     {
-      id: 5,
+      id: 6,
       title: "Earthquake Safety Proposal",
       videoUrl: "https://www.facebook.com/sterling.sanado.3/videos/648055060854986",
       description: "Engineer Sterling discusses building safety during earthquakes and proposes legislation to prohibit covering structural elements for easier inspection after earthquakes.",
@@ -94,6 +101,20 @@ const GalleryPage = () => {
   const facebookPhotos = [
     {
       id: 1,
+      title: "Latest Campaign Statement",
+      photoUrl: "https://www.facebook.com/sterling.sanado.3/posts/pfbid02K46DLkH2Xi6hajmWSfQDxrynHvBesqFGwREziH6JsVhxwHStCefSUh7JYpJT6EXSl",
+      description: "Important update from Engr. Sterling Sañado's campaign",
+      date: "March 22, 2025"
+    },
+    {
+      id: 2,
+      title: "Campaign Update",
+      photoUrl: "https://www.facebook.com/sterling.sanado.3/posts/pfbid0JdX77bzzvGb5UKQKMydz5j81k6P9x3oLQtF2YE3AR6CvhZGbLNy35iACwpKRYmw1l",
+      description: "Latest update from Engr. Sterling Sañado's campaign trail",
+      date: "March 21, 2025"
+    },
+    {
+      id: 3,
       title: "Congressman Sterling Ascaño Sañado",
       photoUrl: "https://www.facebook.com/photo.php?fbid=122096453672767290&set=pb.61573018708186.-2207520000&type=3",
       description: "Tayo po ay tumululong na mula pa noon, hindi lang sa General Santos City kundi sa kahit saang parte ng Pilipinas. Hindi po pakitang tao lang ang aking mga ginagawang pagtulong. Hindi po ako mayaman, hindi rin naman mahirap. Minsan may sobra sa paghahanap buhay, ating ibinabahat sa ating kapwa. Mabuhay po tayong lahat sa Heneral Santos! #walayatikkayotomatik #ROADTOCONG",
@@ -101,7 +122,7 @@ const GalleryPage = () => {
       thumbnailUrl: "/campaign-event-thumbnail.jpg"
     },
     {
-      id: 2, 
+      id: 4, 
       title: "Relief Operation with Supporters",
       photoUrl: "https://www.facebook.com/photo.php?fbid=122096453672767290&set=pb.61573018708186.-2207520000&type=3",
       description: "Engineer Sterling leading a relief operation for earthquake victims with dedicated volunteers",
@@ -277,60 +298,120 @@ const GalleryPage = () => {
 
           {activeTab === 'videos' && (
             <div className="facebook-videos-section">
-              <h2 className="text-2xl font-bold mb-8 text-center">Campaign Videos</h2>
+              <h2 className="text-2xl font-bold mb-8 text-center">Campaign <span className="text-primary">Videos</span></h2>
               
-              <div className="grid gap-12">
-                {facebookVideos.map((video) => (
-                  <motion.div
-                    key={video.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-lg max-w-4xl mx-auto"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="p-4 bg-gradient-to-r from-blue-50 to-white border-b">
-                      <h3 className="text-2xl font-bold flex items-center">
-                        <FaVideo className="text-primary mr-2" />
-                        {video.title}
-                      </h3>
-                      {video.date && (
-                        <p className="text-xs text-gray-500 mt-1">{video.date}</p>
-                      )}
+              {/* Featured Video */}
+              <div className="mb-12 bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-lg overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <FaVideo className="text-primary text-xl" />
                     </div>
-                    <div className="relative overflow-hidden shadow-md">
+                    <div>
+                      <h3 className="text-2xl font-bold">Featured Video</h3>
+                      <p className="text-gray-600">Get to know your candidate</p>
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="rounded-lg overflow-hidden shadow-lg">
                       <FacebookVideo 
-                        videoUrl={video.videoUrl} 
-                        width="100%" 
-                        height={550}
+                        videoUrl="https://www.facebook.com/61573018708186/videos/1350969392574235"
                         showText={false}
                       />
                     </div>
-                    <div className="p-6">
-                      <p className="text-gray-700 text-lg">{video.description}</p>
-                      <div className="mt-4 flex justify-end">
-                        <a 
-                          href={video.videoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer" 
-                          className="px-4 py-2 bg-primary text-white rounded-full text-sm hover:bg-primary-dark transition-colors"
-                        >
-                          View on Facebook
-                        </a>
-                      </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-3">PAGPAILA: Meet Your Congressional Aspirant</h3>
+                      <p className="text-gray-700 mb-4">
+                        An introduction to Engineer Sterling Sañado, your congressional candidate for General Santos City. 
+                        Learn about his vision, qualifications, and plans for making General Santos City better. 
+                        Look for Option #3 on your ballot - a fresh face for change!
+                      </p>
+                      <p className="text-sm text-gray-500 mb-5">February 22, 2025</p>
+                      <a 
+                        href="https://www.facebook.com/61573018708186/videos/1350969392574235" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary inline-flex items-center gap-2"
+                      >
+                        <FaFacebook size={16} /> Watch Full Video
+                      </a>
                     </div>
-                  </motion.div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold mb-6 mt-12">More Campaign Videos</h3>
+              
+              <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+                {facebookVideos
+                  .filter(video => video.title !== "PAGPAILA: Meet Your Congressional Aspirant")
+                  .map((video) => (
+                    <motion.div
+                      key={video.id}
+                      className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 flex flex-col h-full"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="p-3 bg-gradient-to-r from-blue-50 to-white border-b">
+                        <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <FaVideo className="text-primary text-lg" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold flex items-center">
+                              {video.title}
+                            </h3>
+                            {video.date && (
+                              <p className="text-xs text-gray-500">{video.date}</p>
+                            )}
+                          </div>
+                          <a 
+                            href={video.videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            className="px-2 py-1 bg-primary text-white rounded-full text-xs hover:bg-primary-dark transition-colors flex items-center gap-1"
+                          >
+                            <FaFacebook size={12} /> View
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex-1 p-3">
+                        <div className="relative aspect-video">
+                          <div className="absolute -right-1 -top-1 w-24 h-24 bg-primary/10 rounded-full z-0"></div>
+                          <div className="absolute -left-1 -bottom-1 w-16 h-16 bg-primary/5 rounded-full z-0"></div>
+                          <div className="relative z-10 shadow-md rounded-lg overflow-hidden h-full">
+                            <FacebookVideo 
+                              videoUrl={video.videoUrl} 
+                              showText={false}
+                            />
+                          </div>
+                        </div>
+                        <div className="mt-3 relative z-10">
+                          <p className="text-gray-700 text-sm line-clamp-2 pb-2 mb-2 border-b border-gray-100">{video.description}</p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1 text-xs text-gray-500">
+                              <span className="inline-flex items-center gap-1"><FaVideo className="text-primary" /> Campaign Video</span>
+                            </div>
+                            <span className="text-xs text-gray-400">{video.date}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
                 ))}
               </div>
               
-              <div className="text-center mt-12">
-                <p className="text-gray-500 mb-4">Follow us on Facebook for more videos and updates!</p>
+              <div className="text-center mt-12 bg-gradient-to-r from-blue-50 to-white p-8 rounded-lg shadow-inner border border-blue-100">
+                <h3 className="text-xl font-bold mb-2">Stay Updated with Our Campaign!</h3>
+                <p className="text-gray-600 mb-6">Follow Engineer Sterling Sañado on Facebook for more videos and campaign updates</p>
                 <a 
                   href="https://www.facebook.com/profile.php?id=61573018708186" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-primary inline-flex items-center"
+                  className="btn-primary inline-flex items-center gap-2"
                 >
+                  <FaFacebook size={18} />
                   Visit Our Facebook Page
                 </a>
               </div>
@@ -358,7 +439,7 @@ const GalleryPage = () => {
                     <img src="/gensanbanner.png" className="w-full h-full object-cover" alt="General Santos City" />
                   </div>
                   <div className="overflow-hidden">
-                    <img src="/gensan-seal.jpg" className="w-full h-full object-cover" alt="GenSan Seal" />
+                    <img src="/eaglesSeal.png" className="w-full h-full object-cover" alt="Eagles Seal" />
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -378,58 +459,57 @@ const GalleryPage = () => {
                 </div>
               </div>
               
-              <div className="grid gap-12">
+              {/* Two-column Facebook Posts Grid */}
+              <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                 {facebookPhotos.map((photo) => (
                   <motion.div
                     key={photo.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto border border-gray-100"
+                    className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100 flex flex-col h-full"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                   >
-                    <div className="p-4 bg-gradient-to-r from-blue-50 to-white border-b">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                          <FaFacebook className="text-primary text-xl" />
+                    <div className="p-3 bg-gradient-to-r from-blue-50 to-white border-b">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                          <FaFacebook className="text-primary text-lg" />
                         </div>
-                        <div>
-                          <h3 className="text-xl font-bold flex items-center">
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold flex items-center">
                             {photo.title}
                           </h3>
                           {photo.date && (
                             <p className="text-xs text-gray-500">{photo.date}</p>
                           )}
                         </div>
+                        <a 
+                          href={photo.photoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer" 
+                          className="px-2 py-1 bg-primary text-white rounded-full text-xs hover:bg-primary-dark transition-colors flex items-center gap-1"
+                        >
+                          <FaFacebook size={12} /> View
+                        </a>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <div className="relative">
-                        <div className="absolute -right-1 -top-1 w-32 h-32 bg-primary/10 rounded-full z-0"></div>
-                        <div className="absolute -left-1 -bottom-1 w-24 h-24 bg-primary/5 rounded-full z-0"></div>
-                        <div className="relative z-10 shadow-lg rounded-lg overflow-hidden">
+                    <div className="flex-1 p-3">
+                      <div className="relative h-[500px]">
+                        <div className="absolute -right-1 -top-1 w-24 h-24 bg-primary/10 rounded-full z-0"></div>
+                        <div className="absolute -left-1 -bottom-1 w-16 h-16 bg-primary/5 rounded-full z-0"></div>
+                        <div className="relative z-10 shadow-md rounded-lg overflow-hidden h-full">
                           <FacebookPhoto 
                             photoUrl={photo.photoUrl} 
-                            width="100%" 
-                            height={550}
                             showCaption={true}
                           />
                         </div>
                       </div>
-                      <div className="mt-6 relative z-10">
-                        <p className="text-gray-700 text-lg pb-2 border-b border-gray-100">{photo.description}</p>
-                        <div className="flex items-center justify-between mt-4">
-                          <div className="flex items-center gap-2 text-sm text-gray-500">
-                            <span className="inline-flex items-center gap-1"><FaFacebook className="text-primary" /> Original Post</span>
+                      <div className="mt-3 relative z-10">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-1 text-xs text-gray-500">
+                            <span className="inline-flex items-center gap-1"><FaFacebook className="text-primary" /> Facebook</span>
                           </div>
-                          <a 
-                            href={photo.photoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer" 
-                            className="px-4 py-2 bg-primary text-white rounded-full text-sm hover:bg-primary-dark transition-colors"
-                          >
-                            View on Facebook
-                          </a>
+                          <span className="text-xs text-gray-400">{photo.date}</span>
                         </div>
                       </div>
                     </div>

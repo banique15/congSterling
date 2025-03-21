@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
       {/* GenSan Seal Background */}
       <div className="absolute inset-0 overflow-hidden">
         <img 
-          src="/gensanseal.png" 
+          src="/eaglesSeal.png" 
           alt="" 
           className="absolute opacity-30 w-[80%] md:w-[50%] h-auto top-1/2 -translate-y-1/2 left-[-15%] md:left-5"
           aria-hidden="true"

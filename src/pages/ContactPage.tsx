@@ -188,17 +188,17 @@ const ContactPage = () => {
             >
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                  <img src="/gensanseal.png" alt="GenSan Seal" className="w-10 h-10" />
+                  <img src="/eaglesSeal.png" alt="Eagles Seal" className="w-10 h-10" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">Tarpaulin Sponsorship</h3>
-                  <p className="text-primary font-medium">Only ₱72 per sponsor</p>
+                  <p className="text-primary font-medium">Only ₱48 per sponsor</p>
                 </div>
               </div>
               
               <div className="space-y-4 mb-6">
                 <p className="text-gray-700">
-                  For just <span className="font-bold text-primary">₱72</span>, you can sponsor a 
+                  For just <span className="font-bold text-primary">₱48</span>, you can sponsor a 
                   <span className="font-bold"> 2ft × 3ft tarpaulin</span> featuring Engineer Sterling Sañado 
                   and his platform for General Santos City.
                 </p>
@@ -235,13 +235,12 @@ const ContactPage = () => {
               <h3 className="text-xl font-bold mb-4">Payment Details</h3>
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
                 <div className="mb-4">
-                  <div className="w-48 h-48 bg-gray-200 rounded-lg mx-auto flex items-center justify-center">
-                    {/* QR Code placeholder - to be replaced with actual QR code */}
-                    <p className="text-gray-500 text-sm">QR Code coming soon</p>
+                  <div className="w-64 h-64 mx-auto flex items-center justify-center">
+                    <img src="/qr.png" alt="QR Code for payment" className="w-full h-full object-contain" />
                   </div>
                 </div>
                 <p className="text-gray-700 font-medium">
-                  Scan the QR code to contribute ₱72 for a tarpaulin sponsorship
+                  Scan the QR code to contribute ₱48 for a tarpaulin sponsorship
                 </p>
               </div>
               
