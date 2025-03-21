@@ -1,0 +1,48 @@
+services:
+  # Static site option
+  - type: web
+    name: congsterling-static
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /favicon.ico
+        destination: /favicon/favicon.ico
+      - type: rewrite
+        source: /platform
+        destination: /index.html
+      - type: rewrite
+        source: /platform/*
+        destination: /index.html
+      - type: rewrite
+        source: /gallery
+        destination: /index.html
+      - type: rewrite
+        source: /gallery/*
+        destination: /index.html
+      - type: rewrite
+        source: /about
+        destination: /index.html
+      - type: rewrite
+        source: /about/*
+        destination: /index.html
+      - type: rewrite
+        source: /contact
+        destination: /index.html
+      - type: rewrite
+        source: /contact/*
+        destination: /index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  # Node.js service option (alternative)
+  - type: web
+    name: congsterling-node
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production 

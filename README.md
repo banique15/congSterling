@@ -52,3 +52,51 @@ export default tseslint.config({
   },
 })
 ```
+
+# Sterling Sañado Campaign Site
+
+## Deployment Options
+
+This application can be deployed in multiple ways:
+
+### Static Site Hosting
+
+For static site hosting (Netlify, Vercel, Render, etc.):
+
+1. Build the project:
+   ```
+   npm run build
+   ```
+
+2. The `dist` folder contains the built application that can be deployed to any static hosting service.
+
+3. Important configuration files for various platforms:
+   - `_redirects` - For Netlify and some other platforms
+   - `netlify.toml` - Specific to Netlify
+   - `vercel.json` - Specific to Vercel
+   - `render.yaml` - For Render static site deployments
+   - `web.config` - For IIS-based hosting
+   - `200.html` - Fallback for direct route access
+
+### Node.js Server (Alternative)
+
+Alternatively, you can deploy using the included Express server:
+
+1. Install dependencies:
+   ```
+   npm install
+   ```
+
+2. Build the project:
+   ```
+   npm run build
+   ```
+
+3. Start the server:
+   ```
+   npm start
+   ```
+
+4. For Render deployment, select the Node.js service option from the `render.yaml` configuration.
+
+All deployment options handle client-side routing properly, ensuring direct access to routes like `/about` or `/platform` works correctly.
