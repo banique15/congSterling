@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaLightbulb, FaHospital, FaGraduationCap, FaIndustry, FaLeaf, FaShieldAlt } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
+import AdBanner from '../components/AdBanner';
 
 const PlatformPage = () => {
   const [activeTab, setActiveTab] = useState<string>('infrastructure');
@@ -89,6 +90,8 @@ const PlatformPage = () => {
         title="Our Platform" 
         subtitle="Engineer Sterling Sañado's vision and plan for General Santos City" 
       />
+      
+      <AdBanner />
 
       {/* Platform Introduction */}
       <section className="section bg-white">

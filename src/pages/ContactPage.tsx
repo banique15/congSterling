@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
+import AdBanner from '../components/AdBanner';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -90,6 +91,8 @@ const ContactPage = () => {
         title="Contact Us" 
         subtitle="We would love to hear from you. Get in touch with our team." 
       />
+      
+      <AdBanner />
 
       {/* Contact Information */}
       <section className="section bg-white">
