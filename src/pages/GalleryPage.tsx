@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaSearch, FaTimes, FaVideo, FaFacebook } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
-import AdBanner from '../components/AdBanner';
 import FacebookVideo from '../components/FacebookVideo';
 import FacebookPhoto from '../components/FacebookPhoto';
 
@@ -158,8 +157,6 @@ const GalleryPage = () => {
         title="Media Gallery" 
         subtitle="Photos and videos of Engineer Sterling Sañado's campaign and community work" 
       />
-      
-      <AdBanner />
 
       {/* Gallery Section */}
       <section className="section bg-white">

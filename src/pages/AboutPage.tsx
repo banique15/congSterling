@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaUserGraduate, FaBriefcase, FaMedal, FaHandshake } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
-import AdBanner from '../components/AdBanner';
 
 const AboutPage = () => {
   // Timeline data
@@ -38,8 +37,6 @@ const AboutPage = () => {
         title="About Sterling Sañado" 
         subtitle="A dedicated leader with a vision for a better General Santos City" 
       />
-      
-      <AdBanner />
 
       {/* Biography Section */}
       <section className="section bg-white">
